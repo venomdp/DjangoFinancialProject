@@ -11,6 +11,9 @@ class Customer(models.Model):
     email = models.CharField(max_length=50)
     phone = models.CharField(max_length=12)
 
+    def __str__(self):
+        return self.name
+
 
 class Stock(models.Model):
     customer = models.ForeignKey('Customer', on_delete=models.CASCADE)
