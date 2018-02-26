@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+{% load staticfiles %}
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,7 +12,29 @@
     <title>{{ crypto.name }}</title>
   </head>
   <body>
-    <h1>{{ crypto.customer.name }} purchased {{ crypto.numCoins }} units of {{ crypto.name }} ({{ crypto.symbol }}) at ${{ crypto.buyPrice }} per unit on {{ crypto.buyDate }}</h1>
+     <div class ="jumbotron text-left">
+        <h1><b>{{ crypto.customer.name }}'s {{ crypto.name }}</b></h1>
+    </div>
+     <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <table class="table table-bordered text-center">
+                    <tr>
+                        <th>Name</th>
+                        <th>Number of Units</th>
+                        <th>Buy Price</th>
+                        <th>Date Bought</th>
+                    </tr>
+                    <tr>
+                        <td>{{ crypto.name }}({{ crypto.symbol }})</td>
+                        <td>{{ crypto.numCoins }}</td>
+                        <td>{{ crypto.buyPrice}}</td>
+                        <td>{{ crypto.buyDate }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+     </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

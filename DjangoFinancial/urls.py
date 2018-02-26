@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^customer/(\d+)/s/(\d+)/$', include('financial.urls')),
     url(r'^customer/(\d+)/c/(\d+)/$', include('financial.urls')),
 
+
 ]

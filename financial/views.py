@@ -29,3 +29,4 @@ def cryptoView(request, customer_id, crypto_id):
 
 
 
+

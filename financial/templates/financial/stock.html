@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+{% load staticfiles %}
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,13 +9,34 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+
     <title>{{ stock.name }}</title>
   </head>
   <body>
-    <div class ="jumbotron text-center">
+    <div class ="jumbotron text-left">
         <h1><b>{{ stock.customer.name }}'s {{ stock.name }} Stock</b></h1>
     </div>
-    <h2>{{ stock.customer.name }} purchased {{ stock.numShares }} shares of {{ stock.name }} ({{ stock.symbol }}) at ${{ stock.buyPrice }} per share on {{ stock.buyDate }}</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <table class="table table-bordered text-center">
+                    <tr>
+                        <th>Name</th>
+                        <th>Number of Shares</th>
+                        <th>Buy Price</th>
+                        <th>Date Bought</th>
+                    </tr>
+                    <tr>
+                        <td>{{ stock.name }}({{ stock.symbol }})</td>
+                        <td>{{ stock.numShares }}</td>
+                        <td>{{ stock.buyPrice}}</td>
+                        <td>{{ stock.buyDate }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+     </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
