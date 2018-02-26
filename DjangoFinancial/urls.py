@@ -20,6 +20,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('financial.urls')),
-    url(r'^customer/', include ('financial.urls')),
-    url(r'^customer/\d+/', include ('financial.urls')),
+    url(r'^customer/', include('financial.urls')),
+    url(r'^customer/\d+/', include('financial.urls')),
 ]

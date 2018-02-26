@@ -17,7 +17,7 @@
     <h2>Customer List</h2>
     <ul>
         {%  for customer in customer %}
-            <li><a href="#">{{ customer.name }}</a> - {{ customer.city }}</li>
+            <li><a href="{% url 'onecustomer' customer.id %}">{{ customer.name }}</a> - {{ customer.city }}</li>
         {% endfor %}
     </ul>
 
