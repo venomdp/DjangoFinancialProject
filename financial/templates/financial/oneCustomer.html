@@ -26,13 +26,12 @@
                     </tr>
                     {%  for stock in customer.stock_set.all %}
                     <tr>
-                        <td><a href="#">{{ stock.symbol }}</a></td>
+                        <td><a href="../{{ stock.customer.id }}/s/{{ stock.id }}">{{ stock.symbol }}</a></td>
                         <td>{{ stock.numShares }}</td>
                         <td>{{ stock.buyPrice }}</td>
                     </tr>
                     {% endfor %}
                 </table>
-
             </div>
             <div class="col-sm-4">
                 <h3>Cryptos</h3>
@@ -44,7 +43,7 @@
                     </tr>
                     {%  for crypto in customer.crypto_set.all %}
                     <tr>
-                        <td><a href="#">{{ crypto.symbol }}</a></td>
+                        <td><a href="../{{ crypto.customer.id }}/c/{{ crypto.id }}">{{ crypto.symbol }}</a></td>
                         <td>{{ crypto.numCoins }}</td>
                         <td>{{ crypto.buyPrice }}</td>
                     </tr>
