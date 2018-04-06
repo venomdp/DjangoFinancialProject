@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from .models import Customer, Stock, Crypto
+from rest_framework import viewsets
+from .serializers import CustomerSerializer
 
 
 def index(request):
@@ -25,6 +27,10 @@ def stockView(request, customer_id, stock_id):
 def cryptoView(request, customer_id, crypto_id):
     crypto = get_object_or_404(Crypto, pk=crypto_id)
     return render(request, 'financial/crypto.html', {'crypto': crypto})
+
+class CustomerViewSet(viewsets.ModelViewSet):
+    queryset = Customer.objects.all()
+    serializer_class = CustomerSerializer
 
 
 
