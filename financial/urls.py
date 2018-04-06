@@ -4,6 +4,7 @@ from . import views
 
 router = routers.DefaultRouter()
 router.register(r'customers', views.CustomerViewSet)
+router.register(r'stocks', views.StockViewSet)
 
 urlpatterns = [
     url(r'^$', views.index, name='mainpage'),

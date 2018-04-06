@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from .models import Customer, Stock, Crypto
 from rest_framework import viewsets
-from .serializers import CustomerSerializer
+from .serializers import CustomerSerializer, StockSerializer
 
 
 def index(request):
@@ -32,6 +32,9 @@ class CustomerViewSet(viewsets.ModelViewSet):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
 
+class StockViewSet(viewsets.ModelViewSet):
+    queryset = Stock.objects.all()
+    serializer_class = StockSerializer
 
 
 
