@@ -1,10 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from .models import Customer, Stock, Crypto
 from rest_framework import viewsets
 from .serializers import CustomerSerializer, StockSerializer
 from .services import get_stock_price, get_crypto_price
 from django import forms
+from .forms import EditCustomerForm, EditStockForm, EditCryptoForm
 
 
 def index(request):
@@ -42,6 +43,25 @@ class StockViewSet(viewsets.ModelViewSet):
 
 def customerEdit(request, customer_id):
     customer = get_object_or_404(Customer, pk=customer_id)
+    if request.method == "POST":
+        form = EditCustomerForm(request.POST, instance=customer)
+        if form.is_valid():
+            customer = form.save()
+            return redirect(f'/customer/{customer_id}', pk=customer_id)
+    else:
+        form = EditCustomerForm(instance=customer)
+    return render(request, 'financial/update_form.html', {'form': form})
+
+def stockEdit(request, customer_id, stock_id):
+    stock = get_object_or_404(Stock, pk=stock_id)
+    if request.method == "POST":
+        form = EditStockForm(request.POST, instance=stock)
+        if form.is_valid():
+            stock = form.save()
+            return redirect(f'/customer/{customer_id}')
+    else:
+        form = EditStockForm(instance=stock)
+    return render(request, 'financial/update_form.html', {'form': form})
 
 
 

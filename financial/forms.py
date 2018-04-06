@@ -15,3 +15,23 @@ class EditCustomerForm(forms.ModelForm):
         fields = ['name', 'address', 'city', 'state', 'zip', 'email', 'phone']
 
 
+class EditStockForm(forms.ModelForm):
+    symbol = forms.CharField(max_length=6)
+    name = forms.CharField(max_length=30)
+    numShares = forms.DecimalField(max_digits=10, decimal_places=0)
+    buyPrice = forms.DecimalField(max_digits=10, decimal_places=2)
+
+    class Meta:
+        model = Stock
+        fields = ['symbol', 'name', 'numShares', 'buyPrice']
+
+
+class EditCryptoForm(forms.ModelForm):
+    symbol = forms.CharField(max_length=6)
+    name = forms.CharField(max_length=30)
+    numCoins = forms.DecimalField(max_digits=15, decimal_places=4)
+    buyPrice = forms.DecimalField(max_digits=7, decimal_places=2)
+
+    class Meta:
+        model = Crypto
+        fields = ['symbol', 'name', 'numCoins', 'buyPrice']
