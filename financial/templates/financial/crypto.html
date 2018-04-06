@@ -23,12 +23,14 @@
                         <th>Name</th>
                         <th>Number of Units</th>
                         <th>Buy Price</th>
+                        <th>Current Price</th>
                         <th>Date Bought</th>
                     </tr>
                     <tr>
                         <td>{{ crypto.name }}({{ crypto.symbol }})</td>
                         <td>{{ crypto.numCoins }}</td>
-                        <td>{{ crypto.buyPrice}}</td>
+                        <td>${{ crypto.buyPrice}}</td>
+                        <td>${{ crypto.currentPrice }}</td>
                         <td>{{ crypto.buyDate }}</td>
                     </tr>
                 </table>

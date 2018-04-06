@@ -12,5 +12,6 @@ urlpatterns = [
     url(r'^customer/(\d+)/$', views.oneCustomer, name='onecustomer'),
     url(r'^customer/(\d+)/s/(\d+)/$', views.stockView, name='stockview'),
     url(r'^customer/(\d+)/c/(\d+)/$', views.cryptoView, name='cryptoview'),
-    url(r'api/', include(router.urls))
+    url(r'api/', include(router.urls)),
+    url(r'^customer/update/', views.customerEdit, name='customerupdate')
     ]
