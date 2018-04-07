@@ -31,3 +31,11 @@ class Crypto(models.Model):
     numCoins = models.DecimalField(max_digits=15, decimal_places=4)
     buyPrice = models.DecimalField(max_digits=7, decimal_places=2)
     buyDate = models.DateField(default=date.today())
+
+
+class TopTen(models.Model):
+    symbol = models.CharField(max_length=6)
+    name = models.CharField(max_length=30)
+
+
+

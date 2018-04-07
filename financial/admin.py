@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Customer, Crypto, Stock
+from .models import Customer, Crypto, Stock, TopTen
 
 
 class stockInLine(admin.TabularInline):
@@ -16,3 +16,8 @@ class cryptoInLine(admin.TabularInline):
 
 class customerAdmin(admin.ModelAdmin):
     inlines = [stockInLine, cryptoInLine]
+
+@admin.register(TopTen)
+
+class topTenAdmin(admin.ModelAdmin):
+    inlines = []
