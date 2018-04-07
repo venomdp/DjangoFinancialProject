@@ -35,3 +35,21 @@ class EditCryptoForm(forms.ModelForm):
     class Meta:
         model = Crypto
         fields = ['symbol', 'name', 'numCoins', 'buyPrice']
+
+
+class DeleteCryptoForm(forms.ModelForm):
+    class Meta:
+        model = Crypto
+        fields = []
+
+
+class DeleteStockForm(forms.ModelForm):
+    class Meta:
+        model = Stock
+        fields = []
+
+
+class DeleteCustomerForm(forms.ModelForm):
+    class Meta:
+        model = Customer
+        fields = []

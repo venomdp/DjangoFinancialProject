@@ -1,10 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <title>Top Ten Investments</title>
-</head>
-<body>
-    <p>{{ topten.currentPrice1 }}</p>
-</body>
+  </head>
+  <body>
+    <div class ="jumbotron text-left">
+        <h1><b>Top Ten Investments</b></h1>
+        <p>Chosen based on popularity</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Stocks</h3>
+                <table class="table">
+                    <tr>
+                        <th>Stock</th>
+                        <th>Symbol</th>
+                        <th>Current Price</th>
+                    </tr>
+                    <tr>
+                        <td>{{ topten.name1 }}</td>
+                        <td>{{ topten.symbol1 }}</td>
+                        <td>${{ topten.currentPrice1 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ topten.name2 }}</td>
+                        <td>{{ topten.symbol2 }}</td>
+                        <td>${{ topten.currentPrice2 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ topten.name3 }}</td>
+                        <td>{{ topten.symbol3 }}</td>
+                        <td>${{ topten.currentPrice3 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ topten.name4 }}</td>
+                        <td>{{ topten.symbol4 }}</td>
+                        <td>${{ topten.currentPrice4 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ topten.name5 }}</td>
+                        <td>{{ topten.symbol5 }}</td>
+                        <td>${{ topten.currentPrice5 }}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-sm-4">
+                <h3>Cryptos</h3>
+                <table class="table">
+                    <tr>
+                        <th>Crypto</th>
+                        <th>Symbol</th>
+                        <th>Current Price</th>
+                    </tr>
+                    <tr>
+                        <td>{{ topten.name6 }}</td>
+                        <td>{{ topten.symbol6 }}</td>
+                        <td>${{ topten.currentPrice6 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ topten.name7 }}</td>
+                        <td>{{ topten.symbol7 }}</td>
+                        <td>${{ topten.currentPrice7 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ topten.name8 }}</td>
+                        <td>{{ topten.symbol8 }}</td>
+                        <td>${{ topten.currentPrice8 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ topten.name9 }}</td>
+                        <td>{{ topten.symbol9 }}</td>
+                        <td>${{ topten.currentPrice9 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ topten.name10 }}</td>
+                        <td>{{ topten.symbol10 }}</td>
+                        <td>${{ topten.currentPrice10 }}</td>
+                    </tr>
+                </table>
+            </div>
+    </div>
+
+        <div class="container">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/customer/">Customers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/admin/financial/customer/">Advisors</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>

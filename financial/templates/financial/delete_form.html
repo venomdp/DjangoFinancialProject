@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
       <div class ="jumbotron text-left">
-        <h1><b>Make Updates and Confirm</b></h1>
+        <h1><b>Please Confirm Deletion</b></h1>
+          <p>This cannot be undone</p>
       </div>
 
       <form action="" method="post">{% csrf_token %}
           {{ form.as_p }}
-          <input type="submit" value="Update" />
+          <input type="submit" value="Delete" />
       </form>
 
     <!-- Optional JavaScript -->

@@ -18,7 +18,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-8">
                 <table class="table table-bordered text-center">
                     <tr>
                         <th>Name</th>
@@ -26,6 +26,8 @@
                         <th>Buy Price</th>
                         <th>Current Price</th>
                         <th>Date Bought</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                     <tr>
                         <td>{{ stock.name }}({{ stock.symbol }})</td>
@@ -33,6 +35,8 @@
                         <td>{{ stock.buyPrice}}</td>
                         <td>{{ stock.currentPrice }}</td>
                         <td>{{ stock.buyDate }}</td>
+                        <td><a href='update/'>Edit</a></td>
+                        <td><a href='delete/'>Delete</a></td>
                     </tr>
                 </table>
             </div>

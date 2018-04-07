@@ -18,4 +18,7 @@ urlpatterns = [
     url(r'^customer/(\d+)/s/(\d+)/update', views.stockEdit, name='stockupdate'),
     url(r'^customer/(\d+)/c/(\d+)/update', views.cryptoEdit, name='cryptoupdate'),
     url(r'^topten/(\d+)/', views.topTen, name='topten'),
+    url(r'^customer/(\d+)/s/(\d+)/delete', views.stockDelete, name='stockdelete'),
+    url(r'^customer/(\d+)/c/(\d+)/delete', views.cryptoDelete, name='cryptodelete'),
+    url(r'^customer/(\d+)/delete', views.customerDelete, name='customerdelete'),
     ]
